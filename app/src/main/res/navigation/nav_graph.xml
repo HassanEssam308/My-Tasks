@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allTaskFragment">
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.mytasksapp.fragments.AddTaskFragment"
+        android:label="Add New Task"
+        tools:layout="@layout/fragment_add_task" >
+        <argument
+            android:name="task_id" app:argType="integer" android:defaultValue="-1"/>
+        <action
+            android:id="@+id/action_addTaskFragment_to_allTaskFragment"
+            app:destination="@id/allTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.example.mytasksapp.fragments.TaskDetailsFragment"
+        android:label="Task Details"
+        tools:layout="@layout/fragment_task_details" >
+        <argument android:name="taskId" app:argType="integer" android:defaultValue="0"  />
+
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/allTaskFragment"
+        android:name="com.example.mytasksapp.fragments.AllTasksFragment"
+        android:label="Your Tasks"
+        tools:layout="@layout/fragment_all_tasks" >
+        <action
+            android:id="@+id/action_allTaskFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_allTaskFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+</navigation>

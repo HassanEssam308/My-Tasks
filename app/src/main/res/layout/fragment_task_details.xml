@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TaskDetailsFragment">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/Details_IV_ImageTitle"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="10sp"
+                android:src="@drawable/ic_baseline_info_24" />
+        <TextView
+            android:id="@+id/Details_TV_TextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:text="Text Title"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/Details_IV_ImageTitle"
+            />
+            <ImageView
+                android:id="@+id/Details_IV_ImageDetails"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="10sp"
+                android:layout_below="@+id/Details_IV_ImageTitle"
+                android:src="@drawable/ic_baseline_description_24" />
+        <TextView
+            android:id="@+id/Details_TV_TextDetails"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+            android:text="Text Details"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/Details_IV_ImageTitle"
+            android:layout_toEndOf="@+id/Details_IV_ImageDetails"
+            />
+            <ImageView
+                android:id="@+id/Details_IV_ImageRemind"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="10sp"
+                android:layout_below="@id/Details_IV_ImageDetails"
+                android:src="@drawable/ic_baseline_calendar_month_24" />
+        <TextView
+            android:id="@+id/Details_TV_TextRemind"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_margin="10sp"
+
+            android:text="TextRemind"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_below="@id/Details_TV_TextDetails"
+            android:layout_toEndOf="@+id/Details_IV_ImageTitle"
+            />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/DetailsFR_FloatingBtn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="33dp"
+                android:contentDescription="Add"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/ic_baseline_edit_24"
+
+                app:rippleColor="#48BF3F" />
+        </RelativeLayout>
+
+</FrameLayout>
